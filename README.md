@@ -62,7 +62,68 @@ The page includes an ad or tracking script from adnetwork.com.
 A cookie from adnetwork.com is stored in your browser, tracking your activities across other websites that also load adnetwork.com.
 
 
+# Important Point from Network Layer : 
+In dynamic Routing, Dijkstra Algorthm is used to find the shortest path.
+<br>
+Hop by Hop things happens on the ISP.
+<br>
+Routing Table contains the block of addresses which are assigned to the ISP.
+<br>
+Internet Society creates Classes for IP addresses.
+<br>
+IETF(Internet Engineering Task Force) : It provides the IP addresses to ISP based on the regions not on the classes.
 
+# Important point from Stateful Firewalls(a type of Middle Box) :
+It stores similar data packets in the cache memory which can be allowed or denied.
+<br>
+Network Address Translator (NAT) typically exists on the boundary router or gateway device that connects a local (private) network to the public internet. 
+<br>
+NAT serves several important purposes:
+<br>
+1. Conservation of IPv4 Addresses
+IPv4 has a limited number of addresses (approximately 4.3 billion), which is insufficient for the growing number of devices.
+<br>
+NAT allows multiple devices on a private network to share a single public IP address, significantly reducing the number of public IPs required.
+<br>
+2. Private IP Addressing
+NAT enables devices using private IP addresses (e.g., 192.168.x.x, 10.x.x.x, 172.16.x.x) to communicate with devices on the public internet.
+<br>
+These private IP addresses are not routable on the internet and must be translated to a public IP address.
+<br>
+3. Security
+NAT provides a basic level of security by hiding internal network details. External devices only see the public IP address of the NAT device, not the internal private IP addresses.
+This reduces the attack surface for devices within the private network.
+<br>
+4. Load Balancing
+NAT can distribute incoming traffic across multiple servers or devices, enabling load balancing.
+For example, in port forwarding, NAT maps external requests to specific internal devices or services.
+<br>
 
-References :
+# Important Point from Data Link Layer :
+ARP (Address Resolution Protocol) is a communication protocol used to map an IP address (logical address) to a corresponding MAC address (physical address) within a local network.
+<br>
+In a local network (e.g., Ethernet), devices use MAC addresses to communicate at the hardware level. However, applications and protocols (e.g., TCP/IP) rely on IP addresses to identify devices. ARP resolves this discrepancy by finding the MAC address associated with a specific IP address.
+<br>
+How Does ARP Work?
+<br>
+Broadcast Request:
+When a device wants to communicate with another device in the same local network but only knows the target's IP address:
+<br>
+It sends an ARP Request packet to all devices on the network (broadcast), asking, "Who has this IP address?"
+ARP requrst packet contains MAC Address of sender, IP address of destination which is called frame.
+<br>
+Unicast Reply:
+The device with the requested IP address responds with an ARP Reply containing its MAC address.
+<br>
+Cache the Result:
+To reduce future broadcasts, the device stores the resolved MAC address and IP address mapping in its ARP cache for a short time.
+<br>
+Example: 
+<br>
+If the router knows the destination IP address of the target device (assigned by the DHCP server).
+If the router does not have the corresponding MAC address in its ARP cache, it sends an ARP request on the local network:
+The ARP request asks, "Who has this IP address?"
+The target device replies with its MAC address (ARP response)
+<br>
+# References :
 github.com/Kunal-Kushwaha/DevOps-Bootcamp
