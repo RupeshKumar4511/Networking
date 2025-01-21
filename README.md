@@ -29,6 +29,20 @@ Example of MAN : Public Wifi Network provided across a city and local ISP's.
 <br>
 Example of WAN : Optical fibres and large ISP like TaTa ISP.
 
+# SONET 
+It is a standardized digital communication protocol used to transmit large amounts of data over optical fiber networks. SONET is primarily used in telecommunications and allows the simultaneous transmission of multiple digital streams, ensuring high-speed data transfer and efficient bandwidth utilization.
+<br>
+
+Bandwidth is the maximum amount of data that can be transmitted over a network connection or communication channel within a specific period of time, typically measured in bits per second (bps).
+
+# Frame relay :
+
+Frame Relay is a wide-area network (WAN) technology that enables the efficient transmission of data between devices across a network. It is based on packet-switching, where data is divided into small, variable-sized units called frames and sent over virtual circuits(paths for consistent communication).
+<br>
+Frame Relay Switches: It is one of the device which is 
+Operated by the service provider within their network infrastructure.
+Responsible for routing frames across the network using virtual circuits
+
 # Flow Control 
 Flow control refers to a technique in data communication that ensures the sender and receiver operate at compatible speeds, so the receiver is not overwhelmed by data it cannot process in time. 
 
@@ -61,6 +75,45 @@ You visit example.com (first-party site).
 The page includes an ad or tracking script from adnetwork.com.
 A cookie from adnetwork.com is stored in your browser, tracking your activities across other websites that also load adnetwork.com.
 
+# socket
+A socket is a software abstraction that facilitates communication between two programs, typically over a network. It acts as an endpoint for sending and receiving data across a network or within the same machine.
+<br>
+A socket is defined by a combination of:
+IP Address: Identifies the host or device.
+Port Number: Identifies the specific application or service on the host
+<br>
+When a socket is created, it can either:
+Use a specific port number explicitly provided (e.g., binding to port 80 for HTTP).
+Allow the OS to assign a random available port if no specific port is provided.
+
+# Multiplexing and Demultiplexing at Transport layer :
+Multiplexing (Sender-Side)
+Multiplexing refers to combining data from multiple processes or sources into a single communication stream for transmission to the server.
+<br>
+How It Works:
+<br>
+The sender (usually a client) has multiple applications or processes that need to communicate with the server.
+Each application is identified by a port number.
+The transport layer (e.g., TCP or UDP) attaches a port number to each application's data, creating a unique identifier for the data (e.g., <source IP>:<source port>).
+Data from multiple applications is combined and sent over the shared network.
+<br>
+Example:
+A web browser (using port 80 for HTTP) and an email client (using port 25 for SMTP) both send data over the same network connection. The transport layer adds port numbers to differentiate the data.
+<br>
+<b>2. Demultiplexing (Receiver-Side)</b>
+Demultiplexing is the reverse process of multiplexing: the server separates the received data and delivers it to the appropriate application based on its port number.
+<br>
+How It Works:
+<br>
+The server receives the combined data stream.
+The transport layer examines the destination port number in the header of each data packet.
+Based on the port number, the data is delivered to the corresponding application or process running on the server.
+<br>
+Example:
+The server receives a packet for port 80 (web server) and another for port 25 (email server). It routes the packets to the respective applications.
+
+# Congestion Control 
+Congestion control is a mechanism used in computer networks to prevent or mitigate network congestion, which occurs when too much data is sent over a network, leading to performance degradation such as packet loss, delays, or reduced throughput.
 
 # Important Point from Network Layer : 
 In dynamic Routing, Dijkstra Algorthm is used to find the shortest path.
