@@ -29,6 +29,19 @@ Example of MAN : Public Wifi Network provided across a city and local ISP's.
 <br>
 Example of WAN : Optical fibres and large ISP like TaTa ISP.
 
+# RFC 
+It stands for request for comment.
+RFC documents contain technical specifications and organizational notes for the Internet and are the core output of the IETF. 
+<br>
+More information : https://www.ietf.org/process/rfcs/
+
+# Wireshark 
+It is packet sniffing and packet capturing tool. 
+Sniffing means finding and analysing the data packet which is being transfered or received and know more details about it. 
+
+# ICMP :
+Internet Control Message Protocol (ICMP) is used for reporting errors and performing network diagnostics.
+
 # SONET 
 It is a standardized digital communication protocol used to transmit large amounts of data over optical fiber networks. SONET is primarily used in telecommunications and allows the simultaneous transmission of multiple digital streams, ensuring high-speed data transfer and efficient bandwidth utilization.
 <br>
@@ -86,6 +99,7 @@ When a socket is created, it can either:
 Use a specific port number explicitly provided (e.g., binding to port 80 for HTTP).
 Allow the OS to assign a random available port if no specific port is provided.
 
+
 # Multiplexing and Demultiplexing at Transport layer :
 Multiplexing (Sender-Side)
 Multiplexing refers to combining data from multiple processes or sources into a single communication stream for transmission to the server.
@@ -111,6 +125,17 @@ Based on the port number, the data is delivered to the corresponding application
 <br>
 Example:
 The server receives a packet for port 80 (web server) and another for port 25 (email server). It routes the packets to the respective applications.
+
+# Important point from duplex :
+Simplex : only from one end, data can be sent  like : Radio FM. 
+<br>
+Half Duplex : Data can be sent from both side but only one at one time like 
+Woky toky. 
+<br>
+Full Duplex : Data can be sent from both device simultaneousaly from both side like real time application.
+<br>
+Pager is the first device which is used to send the text data. 
+
 
 # Congestion Control 
 Congestion control is a mechanism used in computer networks to prevent or mitigate network congestion, which occurs when too much data is sent over a network, leading to performance degradation such as packet loss, delays, or reduced throughput.
@@ -178,5 +203,25 @@ If the router does not have the corresponding MAC address in its ARP cache, it s
 The ARP request asks, "Who has this IP address?"
 The target device replies with its MAC address (ARP response)
 <br>
+
+# In 3G, 4G and 5G and 6G :
+Thee major difference is bandwidth or we can say the diffference in the range of their frequency. 
+
+
+# Physical Layer 
+There are two ways to transfer the data from router/modem to your computer/laptop or mobile . 
+1. wireless : radio waves are used in the wireless. 
+like : TV signal and FM radio. 
+<br>
+2. Wired : There are two types of wire. 
+<br>
+(i) Coaxial : It is used in wire connect your antena to your TV. 
+<br>
+(ii) UTP/STP : It is used in Ethernet cables. It can be shielded or unshielded. 
+<br>
+(iii) Optical Fibre : It is used for transfer the data to far places like optical fibres are submerged under the water to connect one country to another. 
+
+
+
 # References :
 github.com/Kunal-Kushwaha/DevOps-Bootcamp
