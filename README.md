@@ -221,7 +221,34 @@ like : TV signal and FM radio.
 <br>
 (iii) Optical Fibre : It is used for transfer the data to far places like optical fibres are submerged under the water to connect one country to another. 
 
+# Cellular Network :
+A wide-area wireless communication system that uses cell towers (base stations) to provide network access to mobile devices over licensed radio frequency bands.
+<br>
+A cell is a geographical area covered by a base station's radio signals.
 
+# Wifi-Fidelity :
+A local-area wireless networking technology that allows devices to connect to the internet or communicate with each other over unlicensed frequency bands.
+
+# UE and RAN 
+UE means User Equipment. UE refers to the devices that connect to the cellular network. Examples:
+
+Mobile phones
+Tablets
+Laptops with cellular connectivity
+IoT devices with cellular modems (e.g., smart meters, smartwatches)
+<br>
+RAN : It stands for Radio Access Network. RAN is the part of the cellular network that connects UE to the core network using radio signals.
+<br>
+Components:
+<br>
+Base Stations: Known as eNodeB in 4G or gNodeB in 5G. These manage radio communication with UE.
+<br>
+Antennas: Facilitate the transmission and reception of radio signals.
+<br>
+Backhaul Links: Connect the base stations to the core network.
+
+# ORAN 
+Open Resource access network 
 
 # References :
 github.com/Kunal-Kushwaha/DevOps-Bootcamp
