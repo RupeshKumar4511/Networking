@@ -29,6 +29,11 @@ Example of MAN : Public Wifi Network provided across a city and local ISP's.
 <br>
 Example of WAN : Optical fibres and large ISP like TaTa ISP.
 
+# Public and Public ip address :
+Routers have assigned public ip address by the ISP. 
+<br>
+Our Cellular phones have private ip address by CGNAT (Carrier-Grade Network Address Translation) used by mobile carriers and if we connected to wifi. It also assigns private ip addresses using DHCP. 
+
 # RFC 
 It stands for request for comment.
 RFC documents contain technical specifications and organizational notes for the Internet and are the core output of the IETF. 
@@ -205,7 +210,7 @@ The target device replies with its MAC address (ARP response)
 <br>
 
 # In 3G, 4G and 5G and 6G :
-Thee major difference is bandwidth or we can say the diffference in the range of their frequency. 
+Thee major difference is bandwidth or we can say the difference in the range of their frequency. 
 
 
 # Physical Layer 
@@ -226,7 +231,7 @@ A wide-area wireless communication system that uses cell towers (base stations) 
 <br>
 A cell is a geographical area covered by a base station's radio signals.
 
-# Wifi-Fidelity :
+# Wifi: Wireless-Fidelity :
 A local-area wireless networking technology that allows devices to connect to the internet or communicate with each other over unlicensed frequency bands.
 
 # UE and RAN 
@@ -247,8 +252,10 @@ Antennas: Facilitate the transmission and reception of radio signals.
 <br>
 Backhaul Links: Connect the base stations to the core network.
 
-# ORAN 
-Open Resource access network 
+# Evolution in 5G
+UE: 5G UEs are designed to support higher frequencies (mmWave), advanced modulation schemes, and multiple antennas for better performance.
+<br>
+RAN: 5G RAN introduces concepts like Cloud RAN (C-RAN) and Open RAN (O-RAN), which virtualize and open up the RAN architecture for greater flexibility and interoperability.
 
 # References :
 github.com/Kunal-Kushwaha/DevOps-Bootcamp
