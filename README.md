@@ -321,7 +321,47 @@ RAN: 5G RAN introduces concepts like Cloud RAN (C-RAN) and Open RAN (O-RAN), whi
 7. Secure Session Ends
    When the session ends (e.g., the user closes the browser), the encrypted connection is closed.
 
+<br>
+```bash 
+In asymmetric cryptography, a shared secret key is typically generated using a key exchange algorithm, such as Diffie-Hellman (DH) or Elliptic Curve Diffie-Hellman (ECDH). Here's how it works:
 
+1. Key Generation (Asymmetric Pair)
+Both the client and server generate their own private and public key pairs:
+
+Client: Generates (PrivateKey_C, PublicKey_C)
+Server: Generates (PrivateKey_S, PublicKey_S)
+2. Public Key Exchange
+The client sends its PublicKey_C to the server.
+The server sends its PublicKey_S to the client.
+3. Shared Secret Computation
+Using their private keys and the received public key, both parties compute the shared secret:
+
+Client computes: SharedSecret = Function(PrivateKey_C, PublicKey_S)
+Server computes: SharedSecret = Function(PrivateKey_S, PublicKey_C)
+4. Result: Identical Shared Secret
+Due to the mathematical properties of the algorithm, both computations result in the same shared secret.
+
+Example: Diffie-Hellman (DH) Key Exchange
+For DH, the steps are:
+
+Choose a prime number p and a generator g (public parameters).
+
+Key Pair Generation
+Client picks a private key a and computes A = g^a mod p.
+Server picks a private key b and computes B = g^b mod p.
+Exchange Public Keys (A and B).
+
+Compute Shared Secret
+Client: S = B^a mod p
+Server: S = A^b mod p
+
+Both sides get the same S.
+
+Why Use Asymmetric Cryptography for a Shared Secret?
+
+Asymmetric key exchange allows two parties to securely derive a shared secret over an untrusted network. Once the shared secret is established, it is often used to derive a symmetric key (e.g., for AES encryption), since symmetric encryption is faster and more efficient.
+
+```
 
 # FTP 
 FTP (File Transfer Protocol) is a standard network protocol used to transfer files between a client and a server over a network.
