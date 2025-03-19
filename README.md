@@ -138,7 +138,7 @@ The transport layer (e.g., TCP or UDP) attaches a port number to each applicatio
 Data from multiple applications is combined and sent over the shared network.
 <br>
 Example:
-A web browser (using port 80 for HTTP) and an email client (using port 25 for SMTP) both send data over the same network connection. The transport layer adds port numbers to differentiate the data.
+A web browser (using port 80 for HTTP) and an email client (using port 25 for SMTP and if TLS then port 585 is used) both send data over the same network connection. The transport layer adds port numbers to differentiate the data.
 <br>
 <b>2. Demultiplexing (Receiver-Side)</b>
 Demultiplexing is the reverse process of multiplexing: the server separates the received data and delivers it to the appropriate application based on its port number.
@@ -388,6 +388,67 @@ Transferring the firewalls to system in an office .
 <br>
 It uses UDP instead of TCP. 
 <br>
+
+# DNS (Domain Name System):
+when we search any url on the browser then os goes to check its intial cache if its ip address exist or not then it goes to the ISP(called Recursive Resolver) and if not found then it goes to the Root Name server and if not found it goes to Top Level Domain and if not found then it goes to Autherative Name Server. 
+<br>
+<br>
+
+```bash 
+Configure DNS Records
+
+A Record : (IPv4 Address)
+Purpose: Points your domain to an IPv4 address of your server.
+Settings:
+Host: @ (for root domain) or subdomain (if applicable)
+Points to: Your server’s IPv4 address (e.g., 192.168.1.1)
+TTL: Set to default (or 600 for faster updates)
+
+
+Here,
+TTL (Time to Live) defines how long a DNS record is cached by DNS resolvers before they request a fresh copy from the authoritative nameserver(Refresh Time).
+
+
+
+
+AAAA Record: (IPv6 Address)
+Purpose: Same as A Record but for IPv6.
+Settings:
+Host: @ or subdomain
+Points to: Your IPv6 address (e.g., 2001:db8::1)
+TTL: Default or 600
+
+
+
+
+CNAME Record: (Alias)
+Purpose: Maps a subdomain to another domain name.
+Settings:
+Host: www (or another subdomain)
+Points to: Your domain (example.com) or another hostname
+TTL: Default
+
+
+
+MX Record (Mail Exchange)
+Purpose: Routes email to your mail server.
+Settings:
+Host: @
+Points to: Your mail server address (e.g., mail.example.com)
+Priority: Lower value = higher priority (e.g., 10, 20)
+TTL: Default
+
+
+
+
+TXT Record (Verification & SPF, DKIM, etc.)
+Purpose: Used for domain verification, SPF, DKIM, and security settings.
+Settings:
+Host: @ or _dmarc (for DMARC)
+Value: TXT string provided (e.g., "v=spf1 include:_spf.google.com ~all")
+
+```
+
 
 
 # References :
