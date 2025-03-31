@@ -33,6 +33,21 @@ Example of MAN : Public Wifi Network provided across a city and local ISP's.
 <br>
 Example of WAN : Optical fibres and large ISP like TaTa ISP.
 
+# Network Topology:
+Topology: It refers to how the different computers are connected to each other. 
+<br>
+1. Bus Topology
+<br>
+2. Ring (Token Base)
+<br>
+3. Star (Client Server)
+<br>
+4. Hierarchical (In the Hierachical form) 
+<br>
+5. Hybrid (Bus + star) 
+<br>
+6. Mesh 
+
 # Public and Private ip address :
 
 Routers have assigned public ip address by the ISP.
@@ -235,6 +250,24 @@ The ARP request asks, "Who has this IP address?"
 The target device replies with its MAC address (ARP response)
 <br>
 
+# RARP 
+RARP (Reverse Address Resolution Protocol) is a network protocol used to map a device’s MAC (Media Access Control) address to an IP (Internet Protocol) address.
+<br>
+How RARP Works
+<br>
+A diskless device (like a thin client or a networked workstation) does not know its IP address at startup.
+<br>
+It broadcasts a RARP request on the network, asking “What is my IP address?” while including its MAC address.
+<br>
+A RARP server, which has a table mapping MAC addresses to IP addresses, responds with the corresponding IP address.
+<br>
+The device receives its IP address and can now communicate over the network.
+
+# Remote Login using SSH :
+RDP ( for Windows)
+<br>
+Putty (for Remote server login )
+
 # In 3G, 4G and 5G and 6G :
 
 Thee major difference is bandwidth or we can say the difference in the range of their frequency.
@@ -322,7 +355,8 @@ RAN: 5G RAN introduces concepts like Cloud RAN (C-RAN) and Open RAN (O-RAN), whi
    When the session ends (e.g., the user closes the browser), the encrypted connection is closed.
 
 <br>
-```bash 
+```bash
+
 In asymmetric cryptography, a shared secret key is typically generated using a key exchange algorithm, such as Diffie-Hellman (DH) or Elliptic Curve Diffie-Hellman (ECDH). Here's how it works:
 
 1. Key Generation (Asymmetric Pair)
@@ -449,6 +483,7 @@ Value: TXT string provided (e.g., "v=spf1 include:_spf.google.com ~all")
 
 ```
 
+# 
 
 
 # References :
