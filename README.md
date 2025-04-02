@@ -482,8 +482,73 @@ Host: @ or _dmarc (for DMARC)
 Value: TXT string provided (e.g., "v=spf1 include:_spf.google.com ~all")
 
 ```
+# Routing Protocols 
+```bash 
+Layer 3 switches use dynamic routing protocols like:
 
-# 
+OSPF (Open Shortest Path First) – Uses Dijkstra’s algorithm to find the shortest path.
+
+EIGRP (Enhanced Interior Gateway Routing Protocol) – Uses a composite metric (bandwidth, delay, etc.).
+
+RIP (Routing Information Protocol) – Uses hop count to determine the best path.
+```
+
+
+# Switching Technology :
+Layer 2 Switching :
+```bash 
+Layer 2 Switching (Data Link Layer)
+Definition:
+Layer 2 switching operates at the Data Link Layer (OSI Layer 2) and primarily works with MAC (Media Access Control) addresses. It is used for local communication within the same network segment (broadcast domain).
+
+Key Features:
+Uses MAC addresses to forward frames.
+
+Works within a single broadcast domain.
+
+No IP routing capabilities.
+
+Uses Switching Tables (MAC Address Tables) to store and forward frames.
+
+Commonly used in LANs (Local Area Networks).
+
+Supports VLANs (Virtual Local Area Networks) to segment traffic within a switch.
+
+Example Devices:
+Ethernet Switches (Unmanaged and Managed)
+
+```
+<br>
+<br>
+```bash 
+Layer 3 Switching (Network Layer)
+
+Definition:
+
+Layer 3 switching operates at the Network Layer (OSI Layer 3) and makes forwarding decisions based on IP addresses. It can route packets between different networks (subnets) and supports inter-VLAN routing.
+
+Key Features:
+Uses IP addresses to route packets.
+
+Works across multiple broadcast domains.
+
+Supports inter-VLAN routing (routing between VLANs).
+
+Uses Routing Tables instead of MAC tables.
+
+Often includes support for OSPF, EIGRP, RIP.
+
+
+
+Provides faster packet forwarding than traditional routers due to hardware-based routing.
+
+Example Devices:
+Layer 3 Switches
+
+Routers with Switching Capabilities
+
+```
+
 
 
 # References :
