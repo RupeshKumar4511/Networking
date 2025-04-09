@@ -263,6 +263,69 @@ A RARP server, which has a table mapping MAC addresses to IP addresses, responds
 <br>
 The device receives its IP address and can now communicate over the network.
 
+# Medium Access Protocol: 
+1. CSMA : Carrier Sense Multiple Access : 
+<br>
+It comes with modification: CSMA/CD where CD stands for Collision Detection and CSMA/CA where CA stands for Collison Avoidance. 
+<br>
+```bash 
+TDMA, FDMA, and CDMA are multiple access techniques used in communication systems to allow multiple users to share the same bandwidth/channel without interfering with each other. Here’s a quick breakdown:
+
+1. TDMA – Time Division Multiple Access
+How it works: Divides time into slots; each user gets a specific time slot to transmit.
+
+Example: Used in GSM cellular systems.
+
+Pros: Simple, no interference between users.
+
+Cons: Wastes time if a user has no data to send.
+
+2. FDMA – Frequency Division Multiple Access
+How it works: Splits the frequency band into separate channels; each user gets a specific frequency.
+
+Example: Used in early analog cellular systems like 1G.
+
+Pros: Constant transmission, simple tech.
+
+Cons: Inefficient use of bandwidth.
+
+3. CDMA – Code Division Multiple Access
+How it works: All users share the same frequency and time but are separated by unique codes.
+
+Example: Used in 3G systems like IS-95.
+
+Pros: High capacity, robust against interference.
+
+Cons: Complex signal processing needed.
+
+```
+<br>
+<br>
+```bash 
+The technology used in a SIM card depends on the mobile network generation it’s associated with:
+
+Here's the breakdown:
+2G (GSM) → TDMA + FDMA
+
+GSM networks use FDMA to split the frequency band and TDMA to assign time slots within those frequencies.
+
+So your SIM in a 2G phone uses both TDMA and FDMA.
+
+3G (UMTS/CDMA2000) → CDMA (specifically WCDMA for UMTS)
+
+SIM cards on 3G networks (especially in UMTS) use CDMA techniques.
+
+CDMA2000 (another 3G tech) uses CDMA too, but it originally used RUIM cards, not SIMs — though modern phones may support both.
+
+4G/LTE → Uses OFDMA (Orthogonal Frequency Division Multiple Access), a more advanced version of FDMA.
+
+SIM cards are still used, but the access technology is now OFDMA, not TDMA/FDMA/CDMA.
+
+5G → Uses OFDMA as well, with enhancements.
+
+```
+
+
 # Remote Login using SSH :
 RDP ( for Windows)
 <br>
@@ -495,7 +558,6 @@ RIP (Routing Information Protocol) – Uses hop count to determine the best path
 
 
 # Switching Technology :
-Layer 2 Switching :
 ```bash 
 Layer 2 Switching (Data Link Layer)
 Definition:
@@ -520,6 +582,7 @@ Ethernet Switches (Unmanaged and Managed)
 ```
 <br>
 <br>
+
 ```bash 
 Layer 3 Switching (Network Layer)
 
@@ -549,6 +612,8 @@ Routers with Switching Capabilities
 
 ```
 
+# Subnetting : 
+Dividing the big network into small networks. 
 
 
 # References :
