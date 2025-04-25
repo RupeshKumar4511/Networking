@@ -622,6 +622,154 @@ Dividing the big network into small networks.
 # VLAN :
 A VLAN (Virtual LAN) is a logical grouping of devices in a network — regardless of their physical location — that behave like they're on the same LAN.
 
+# Ethernet at data link layer : 
+```bash 
+Key Functions of Ethernet at the Data Link Layer:
+Framing:
+
+Ethernet encapsulates data into frames, which include headers, payload, and trailers.
+
+A standard Ethernet frame consists of:
+
+Preamble (7 bytes) + Start Frame Delimiter (SFD) (1 byte)
+
+Destination MAC Address (6 bytes)
+
+Source MAC Address (6 bytes)
+
+EtherType/Length (2 bytes)
+
+Payload/Data (46–1500 bytes)
+
+Frame Check Sequence (FCS) (4 bytes for error detection)
+
+MAC (Media Access Control) Addressing:
+
+Ethernet devices are uniquely identified using MAC addresses (48-bit unique addresses assigned to network interfaces).
+
+The destination MAC address helps the frame reach the intended recipient.
+
+Media Access Control (MAC) & Collision Handling:
+
+Uses CSMA/CD (Carrier Sense Multiple Access with Collision Detection) in traditional half-duplex networks to manage access and avoid collisions.
+
+Modern Ethernet networks use full-duplex mode, eliminating collisions through switching.
+
+Error Detection (but not correction):
+
+The FCS (Frame Check Sequence) field in Ethernet frames helps detect errors using the Cyclic Redundancy Check (CRC).
+
+Switching and Forwarding:
+
+Ethernet switches operate at Layer 2 and forward frames based on MAC addresses, reducing network congestion compared to traditional hubs.
+
+```
+# Ethernet at Physical Layer :
+```bash 
+Key Aspects of Ethernet at the Physical Layer:
+Transmission Media:
+
+Copper Cables: Used in twisted-pair Ethernet (e.g., Cat5e, Cat6, Cat7).
+
+Fiber Optic Cables: Used for high-speed, long-distance communication.
+
+Wireless: Ethernet can also be extended using Wi-Fi (IEEE 802.11).
+
+Signaling and Encoding:
+
+Defines how binary data (0s and 1s) is converted into electrical, optical, or radio signals.
+
+Uses different encoding schemes for efficient data transfer:
+
+Manchester Encoding (10 Mbps Ethernet - 10BASE-T)
+
+MLT-3 (Multi-Level Transmit-3) (100 Mbps Ethernet - 100BASE-TX)
+
+8b/10b encoding (Gigabit Ethernet - 1000BASE-X)
+
+PAM-5 (Pulse Amplitude Modulation-5) (1000BASE-T)
+
+PAM-16 (10GBASE-T, 10 Gbps Ethernet)
+
+Ethernet Speed and Standards (IEEE 802.3):
+
+10 Mbps (10BASE-T): First widely used Ethernet standard. Uses Manchester encoding.
+
+100 Mbps (Fast Ethernet, 100BASE-TX): Uses twisted-pair cables (Cat5 or higher).
+
+1 Gbps (Gigabit Ethernet, 1000BASE-T): Uses Cat5e/Cat6 cables, 8b/10b encoding.
+
+10 Gbps (10GBASE-T): Requires Cat6a or Cat7 cables, uses PAM-16 encoding.
+
+40/100 Gbps Ethernet: Uses fiber optics (100GBASE-SR4, LR4).
+
+400G Ethernet and beyond: Used in data centers with fiber optics.
+
+Connector Types:
+
+RJ-45: Used for twisted-pair Ethernet (copper cables).
+
+Fiber Connectors: LC, SC, and MPO/MTP used for fiber optic Ethernet.
+
+Transmission Modes:
+
+Half-duplex: Used in early Ethernet, CSMA/CD for collision detection.
+
+Full-duplex: Modern Ethernet eliminates collisions, improves performance.
+
+```
+# Layer2 loop problem and solution:
+```bash 
+What is a Network Loop?
+A network loop happens when there are multiple active paths between switches in a Layer 2 network, and no mechanism exists to block the extra ones.
+
+This creates a situation where Ethernet frames circle endlessly, overwhelming the network.
+
+Why Loops are Dangerous:
+No TTL (Time To Live) in Layer 2 frames like in Layer 3 (IP) → Frames never expire
+
+Causes:
+
+Broadcast storms
+
+MAC address table instability
+
+Network slowdowns or complete failure
+
+How It Happens:
+Imagine 3 switches (A, B, and C) are connected in a triangle:
+
+mathematica
+Copy
+Edit
+Switch A ↔ Switch B
+   ↘        ↖
+    Switch C
+If all links are active and no loop prevention is in place:
+
+A broadcast frame can go from A → B → C → A → B → ... forever
+
+Each switch floods the frame again and again
+
+Network becomes unusable within seconds
+
+How to Solve It: Spanning Tree Protocol (STP)
+STP is a protocol that prevents loops in a Layer 2 network by blocking redundant paths.
+
+STP does:
+Detects loops
+
+Elects a root bridge
+
+Blocks certain ports to ensure a loop-free logical topology
+
+Variants:
+STP (original, slow convergence)
+
+RSTP (Rapid STP – faster recovery)
+
+MSTP (Multiple Spanning Tree – supports VLANs)
+```
 # References :
 
 github.com/Kunal-Kushwaha/DevOps-Bootcamp
