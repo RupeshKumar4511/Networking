@@ -20,6 +20,14 @@ In networking, every application or service running on a device uses a port numb
 Modem: Connecting to your ISP and converting signals for internet access.
 By itself, a modem usually connects to one device only (e.g., a single computer).
 <br>
+Layer 2 Switch are two types : 
+<br>
+1. Unmanagable Switch : An Unmanaged Switch is a basic plug-and-play device. It automatically forwards data between devices on the same network without requiring configuration.
+<br>
+2. Managable Switch : A Managed Switch offers advanced features that allow you to configure, manage, and monitor your network more closely.
+<br>
+Layer 3 switch will always managable switch. 
+<br>
 Routers have a global (public) IP address assigned by the Internet Service Provider (ISP), and this address is used for communication with servers on the internet. 
 <br>
 When the server sends the response to the router's global IP address then
@@ -442,6 +450,7 @@ RAN: 5G RAN introduces concepts like Cloud RAN (C-RAN) and Open RAN (O-RAN), whi
    When the session ends (e.g., the user closes the browser), the encrypted connection is closed.
 
 <br>
+
 ```bash
 
 In asymmetric cryptography, a shared secret key is typically generated using a key exchange algorithm, such as Diffie-Hellman (DH) or Elliptic Curve Diffie-Hellman (ECDH). Here's how it works:
@@ -590,7 +599,14 @@ Layer 2 switching operates at the Data Link Layer (OSI Layer 2) and primarily wo
 Key Features:
 Uses MAC addresses to forward frames.
 
+
 Works within a single broadcast domain.
+(A single broadcast domain means that all devices in the network segment receive broadcast traffic from any other device within the same segment.)
+Example :  Imagine a simple network:
+Devices: PC1, PC2, PC3, Printer
+Connected to: One unmanaged switch
+When PC1 sends a broadcast (e.g., an ARP request), all other devices (PC2, PC3, Printer) receive that message. They are all in the same broadcast domain.
+
 
 No IP routing capabilities.
 
@@ -618,6 +634,10 @@ Key Features:
 Uses IP addresses to route packets.
 
 Works across multiple broadcast domains.
+(A multiple broadcast domain setup means that the network is segmented into separate groups, where broadcast traffic is contained within each group and not forwarded to others.)
+Example : Each VLAN is isolated at Layer 2.
+If a device in VLAN 10 sends a broadcast, only devices in VLAN 10 will receive it—not those in VLAN 20 or 30.
+
 
 Supports inter-VLAN routing (routing between VLANs).
 
@@ -643,7 +663,10 @@ Dividing the big network into small networks.
 A VLAN (Virtual LAN) is a logical grouping of devices in a network — regardless of their physical location — that behave like they're on the same LAN.
 
 # Ethernet at data link layer : 
-
+Ethernet is a wired communication protocol that enables devices like computers, printers, and routers to communicate over a local area network.
+<br>
+It defines how data is formatted and transmitted over cables, how devices identify and communicate with each other, and how they share access to the network medium
+<br>
 ```bash 
 Key Functions of Ethernet at the Data Link Layer:
 Framing:
@@ -740,6 +763,26 @@ Half-duplex: Used in early Ethernet, CSMA/CD for collision detection.
 Full-duplex: Modern Ethernet eliminates collisions, improves performance.
 
 ```
+
+# Ethernet Frame Format : 
+```bash 
+
+| Field Name                  | Size (Bytes) | Description                        |
+| --------------------------- | ------------ | ---------------------------------- |
+| Preamble                    | 7            | Synchronization                    |
+| Start Frame Delimiter (SFD) | 1            | Marks the start of the frame       |
+| Destination MAC             | 6            | Address of recipient               |
+| Source MAC                  | 6            | Address of sender                  |
+| **Length**                  | 2            | Number of bytes in data field      |
+| Data and Padding            | 46-1500      | Actual data + padding if needed    |
+| CRC (FCS)                   | 4            | Error checking (cyclic redundancy) |
+
+
+The Length field in an IEEE 802.3 Ethernet frame the field size that holds the payload length.
+
+```
+
+
 # Layer2 loop problem and solution:
 
 ```bash 
