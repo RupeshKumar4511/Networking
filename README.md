@@ -63,6 +63,32 @@ Routers have assigned public ip address by the ISP.
 <br>
 Our Cellular phones have private ip address by CGNAT (Carrier-Grade Network Address Translation) used by mobile carriers and if we connected to wifi. It also assigns private ip addresses using DHCP.
 
+# URL : 
+```bash 
+
+example : https://www.w3schools.com/java/
+// Key Components of a URL: 
+
+Protocol: Indicates how the browser should interact with the server (e.g., http for unencrypted web pages, https for secure web pages). 
+
+Domain Name: The address of the website (e.g., www.example.com). 
+
+Path: Specifies the location of the file or resource within the website (e.g., /page1.html). 
+
+Parameters: Optional data passed to the server (e.g., search terms, query strings). 
+
+Subdomain: A part of the domain name, often used for specific sections or purposes within the website (e.g., www, blog). 
+
+
+Why are URLs important?
+Finding Resources: URLs allow browsers to locate and retrieve specific content from servers.
+
+Navigation: URLs enable users to navigate between different web pages and resources. 
+
+Search Engine Optimization (SEO): URLs play a role in how search engines understand and rank web pages. 
+
+
+```
 # RFC
 
 It stands for request for comment.
@@ -109,6 +135,12 @@ A MAC (Media Access Control) address is a unique identifier assigned to a networ
 When a device knows another device's IP address but not its MAC address, it uses ARP(Address Resolution Protocol) to map the IP to the corresponding MAC address.
 <br>
 A computer's Wi-Fi and Bluetooth adapters have different MAC addresses because each network interface controller (NIC) in a device is assigned its own unique MAC address.
+
+# Client-Server architecture :
+Client-server architecture is a network design where multiple clients (users or devices) request and receive services from a central server.
+
+# Peer to Peer architecture : 
+Peer-to-Peer (P2P) architecture is a network model where each device (peer) acts as both a client and a server — sharing resources directly with each other without a central server.
 
 # BitTorrent
 
@@ -191,6 +223,23 @@ Pager is the first device which is used to send the text data.
 
 Congestion control is a mechanism used in computer networks to prevent or mitigate network congestion, which occurs when too much data is sent over a network, leading to performance degradation such as packet loss, delays, or reduced throughput.
 
+# Differece between TCP and UDP : 
+```bash 
+| Feature                       | **TCP (Transmission Control Protocol)**             | **UDP (User Datagram Protocol)**          |
+| ----------------------------- | --------------------------------------------------- | ----------------------------------------- |
+| **Connection**                |  Connection-oriented (3-way handshake)             |  Connectionless                          |
+| **Reliability**               |  Reliable (ensures delivery, order, no duplicates) |  Unreliable (no guarantees)              |
+| **Speed**                     |  Slower (more overhead due to checks)              |  Faster (lightweight, no error checking) |
+| **Data Delivery**             | Ordered & error-checked                             | May be out of order or lost               |
+| **Acknowledgment**            |  Yes (ACKs for received packets)                   |  No acknowledgments                      |
+| **Flow & Congestion Control** |  Built-in                                          |  Not supported                           |
+| **Header Size**               | Larger (20 bytes or more)                           | Smaller (8 bytes)                         |
+| **Use Cases**                 | Web (HTTP/HTTPS), Email (SMTP), File Transfer (FTP) | Streaming (VoIP, video), DNS, Gaming      |
+| **Duplex Mode**               |  Full Duplex                                       |  Full Duplex                             |
+| **Error Handling**            | Built-in retransmission and correction              | Left to the application                   |
+
+
+```
 # Important Point from Network Layer :
 Routing is the process of selecting a path for data packets to travel across networks from a source to a destination.
 <br>
@@ -520,7 +569,7 @@ It uses UDP instead of TCP.
 <br>
 
 # DNS (Domain Name System):
-when we search any url on the browser then os goes to check its intial cache if its ip address exist or not then it goes to the ISP(called Recursive Resolver) and if not found then it goes to the Root Name server and if not found it goes to Top Level Domain and if not found then it goes to Autherative Name Server. 
+when we search any url on the browser then os goes to check its intial cache if its ip address does not exist then it goes to the ISP(called Recursive Resolver) and if not found then it goes to the Root Name server and it goes to Top Level Domain Server and then it goes to Autherative Name Server. 
 <br>
 <br>
 
@@ -531,7 +580,7 @@ A Record : (IPv4 Address)
 Purpose: Points your domain to an IPv4 address of your server.
 Settings:
 Host: @ (for root domain) or subdomain (if applicable)
-Points to: Your server’s IPv4 address (e.g., 192.168.1.1)
+Points to: Your server's IPv4 address (e.g., 192.168.1.1)
 TTL: Set to default (or 600 for faster updates)
 
 
