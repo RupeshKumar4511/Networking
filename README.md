@@ -341,7 +341,7 @@ A RARP server, which has a table mapping MAC addresses to IP addresses, responds
 The device receives its IP address and can now communicate over the network.
 
 # Medium Access Protocol: 
-Medium Access Control (MAC) is a sub-layer of the Data Link Layer (Layer 2) in the OSI model.
+Medium Access Protocol (MAP) is a sub-layer of the Data Link Layer (Layer 2) in the OSI model.
 <br>
 It controls how devices access and share the communication medium (channel) without collisions or conflicts.
 <br>
@@ -349,10 +349,11 @@ It controls how devices access and share the communication medium (channel) with
 <br>
 It comes with modification: CSMA/CD where CD stands for Collision Detection and CSMA/CA where CA stands for Collison Avoidance. 
 <br>
-```bash 
-TDMA, FDMA, and CDMA are multiple access techniques used in communication systems to allow multiple users to share the same bandwidth/channel without interfering with each other. Here’s a quick breakdown:
 
-1. TDMA – Time Division Multiple Access
+```bash 
+TDMA, FDMA, and CDMA are multiple access techniques used in communication systems to allow multiple users to share the same bandwidth/channel without interfering with each other. Here's a quick breakdown:
+
+1. TDMA - Time Division Multiple Access
 How it works: Divides time into slots; each user gets a specific time slot to transmit.
 
 Example: Used in GSM cellular systems.
@@ -361,7 +362,7 @@ Pros: Simple, no interference between users.
 
 Cons: Wastes time if a user has no data to send.
 
-2. FDMA – Frequency Division Multiple Access
+2. FDMA - Frequency Division Multiple Access
 How it works: Splits the frequency band into separate channels; each user gets a specific frequency.
 
 Example: Used in early analog cellular systems like 1G.
@@ -370,7 +371,7 @@ Pros: Constant transmission, simple tech.
 
 Cons: Inefficient use of bandwidth.
 
-3. CDMA – Code Division Multiple Access
+3. CDMA - Code Division Multiple Access
 How it works: All users share the same frequency and time but are separated by unique codes.
 
 Example: Used in 3G systems like IS-95.
@@ -379,10 +380,7 @@ Pros: High capacity, robust against interference.
 
 Cons: Complex signal processing needed.
 
-```
-<br>
-<br>
-```bash 
+ 
 The technology used in a SIM card depends on the mobile network generation it’s associated with:
 
 Here's the breakdown:
